@@ -15,13 +15,14 @@ db.once("open", () => {
 const sample = array => array[Math.floor(Math.random() * array.length)];
 
 
-const seedDB = async() => {
+const seedDB = async () => {
     await Campground.deleteMany({})
 
     for (let i = 0; i < 50; i++) {
         const random1000 = Math.floor(Math.random() * 1000)
         const p = Math.floor(Math.random() * 1000) + 500
         const camp = new Campground({
+            author: '618bda3487c5a25fbbb64ae6',
             location: `${cities[random1000].city} ${cities[random1000].state}`,
             title: `${sample(places)} ${sample(descriptors)}`,
             description: 'desLorem ipsum dolor sit, amet consectetur adipisicing elit. Quos corrupti cupiditate voluptate animi tempore libero a mollitia, atque laudantium officia? Quo itaque voluptas deserunt praesentium sed eos quae, rerum voluptatibus minima possimus non delectus doloremque voluptates quia alias amet ducimus aspernatur. Cum numquam iure mollitia amet, ut eveniet iusto unde!',

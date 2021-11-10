@@ -1,0 +1,10 @@
+html{
+    font-size: 12px;
+}
+
+
+p,
+h4 {
+    overflow-wrap: break-word;
+}
+
