@@ -1,10 +1,13 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const express = require('express')
 const app = express()
 const path = require('path')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const ejsMate = require('ejs-mate')
-const ExpressError = require('./utils/ExpressError')
 const campgroundRoutes = require('./routes/campgroundRoutes')
 const reviewRoutes = require('./routes/reviewRoutes')
 const session = require('express-session')
@@ -12,7 +15,6 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const localStrategy = require('passport-local')
 const User = require('./models/user')
-const CatchAsync = require('./utils/CatchAsync')
 const userRoutes = require('./routes/userRoutes')
 
 
@@ -80,7 +82,8 @@ app.get('/', (req, res) => {
 
 
 app.all('*', (req, res, next) => {
-    next(new ExpressError('Page not found', 404))
+
+    res.render('errors/notfound')
 })
 
 
