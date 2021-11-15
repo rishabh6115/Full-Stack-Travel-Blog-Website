@@ -38,18 +38,18 @@ map.on('load', () => {
                 'step',
                 ['get', 'point_count'],
                 '#46CDCF',
-                10,
+                2,
                 '#FEFDCA',
-                50,
+                5,
                 '#E23E57'
             ],
             'circle-radius': [
                 'step',
                 ['get', 'point_count'],
                 20,
-                10,
+                2,
                 25,
-                40,
+                5,
                 30
             ]
         }
