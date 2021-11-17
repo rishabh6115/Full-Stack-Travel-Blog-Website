@@ -1,147 +1,88 @@
-# YelpCamp Development Process
+# YelpCamp
 A full-stack Node.js project from my web dev course with RESTful routing
 
 ## Live Demo
 To see the app in action, go to [https://cryptic-forest-45396.herokuapp.com/](https://cryptic-forest-45396.herokuapp.com/)
 
 
-## Initial Setup
-* Add Landing Page
-* Add Campgrounds Page that lists all campgrounds
+## Features
 
-Each Campground has:
-   * Name
-   * Image
+* Authentication:
+  
+  * User login with username and password
 
-## Layout and Basic Styling
-* Create header and footer partials
-* Add in Bootstrap
+  * Admin sign-up with admin code
 
-## Creating New Campgrounds
-* Setup new campground POST route
-* Add in body-parser
-* Setup route to show form
-* Add basic unstyled form
+* Authorization:
 
-## Style the campgrounds page
-* Add a better header/title
-* Make campgrounds display in a grid
+  * One cannot manage posts and view user profile without being authenticated
 
-## Style the Navbar and Form
-* Add a navbar to all templates
-* Style the new campground form
+  * One cannot edit or delete posts and comments created by other users
 
-## Add Mongoose
-* Install and configure Mongoose
-* Setup campground model
-* Use campground model inside of routes
+  * Admin can manage all posts and comments
 
-## Show Page
-* Review the RESTful routes we've seen so far
-* Add description to the campground model
-* Show db.collection.drop()
-* Add a show route/template
+* Manage campground posts with basic functionalities:
 
-## Refactor Mongoose Code
-* Create a models directory
-* Use module.exports
-* Require everything correctly!
+  * Create, edit and delete posts and comments
 
-## Add Seeds File
-* Add a seeds.js file
-* Run the seeds file every time the server starts
+  * Upload campground photos
 
-## Add the Comment model!
-* Make comment errors go away!
-* Display comments on campground show page
+  * Display campground location on Google Maps
+  
+  * Search existing campgrounds
 
-## Comment New/Create
-* Discuss nested routes
-* Add the comment new and create routes
-* Add the new comment form
+* Manage user account with basic functionalities:
 
-## Style Show Page
-* Add sidebar to show page
-* Display comments nicely
+  * Profile page setup with sign-up
 
-## Finish Styling Show Page
-* Add public directory
-* Add custom stylesheet
+* Flash messages responding to users' interaction with the app
 
-## Authentication Pt. 1 - Add User Model
-* Install all packages needed for auth
-* Define User model 
+* Responsive web design
 
-## Authentication Pt. 2 - Register
-* Configure Passport
-* Add register routes
-* Add register template
+### Custom Enhancements
 
-## Authentication Pt. 3 - Login
-* Add login routes
-* Add login template
+* Update campground photos when editing campgrounds
 
-## Authentication Pt. 4 - Logout/Navbar
-* Add logout route
-* Prevent user from adding a comment if not signed in
-* Add links to navbar
+* Improve image load time on the landing page using Cloudinary
 
-## Authentication Pt. 5 - Show/Hide Links
-* Show/hide auth links in navbar 
+* Use Helmet to strengthen security
+ 
+## Getting Started
 
-## Refactor The Routes
-* Use Express router to reoragnize all routes
+> This app contains API secrets and passwords that have been hidden deliberately, so the app cannot be run with its features on your local machine. However, feel free to clone this repository if necessary.
 
-## Users + Comments
-* Associate users and comments
-* Save author's name to a comment automatically
 
-## Users + Campgrounds
-* Prevent an unauthenticated user from creating a campground
-* Save username+id to newly created campground
+## Built with
 
-## Editing Campgrounds
-* Add Method-Override
-* Add Edit Route for Campgrounds
-* Add Link to Edit Page
-* Add Update Route
+### Front-end
 
-## Deleting Campgrounds
-* Add Destroy Route
-* Add Delete button
+* [ejs](http://ejs.co/)
+* [Google Maps APIs](https://developers.google.com/maps/)
+* [Bootstrap](https://getbootstrap.com/docs/3.3/)
 
-## Authorization Part 1: Campgrounds
-* User can only edit his/her campgrounds
-* User can only delete his/her campgrounds
-* Hide/Show edit and delete buttons
+### Back-end
 
-## Editing Comments
-* Add Edit route for comments
-* Add Edit button
-* Add Update route
+* [express](https://expressjs.com/)
+* [mongoDB](https://www.mongodb.com/)
+* [mongoose](http://mongoosejs.com/)
+* [async](http://caolan.github.io/async/)
+* [crypto](https://nodejs.org/api/crypto.html#crypto_crypto)
+* [helmet](https://helmetjs.github.io/)
+* [passport](http://www.passportjs.org/)
+* [passport-local](https://github.com/jaredhanson/passport-local#passport-local)
+* [express-session](https://github.com/expressjs/session#express-session)
+* [method-override](https://github.com/expressjs/method-override#method-override)
+* [nodemailer](https://nodemailer.com/about/)
+* [moment](https://momentjs.com/)
+* [cloudinary](https://cloudinary.com/)
+* [geocoder](https://github.com/wyattdanger/geocoder#geocoder)
+* [connect-flash](https://github.com/jaredhanson/connect-flash#connect-flash)
 
-Campground Edit Route: /campgrounds/:id/edit
-Comment Edit Route:    /campgrounds/:id/comments/:comment_id/edit
+### Platforms
 
-## Deleting Comments
-* Add Destroy route
-* Add Delete button
+* [Cloudinary](https://cloudinary.com/)
+* [Heroku](https://www.heroku.com/)
+* [Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)
+## License
 
-Campground Destroy Route: /campgrounds/:id
-Comment Destroy Route:    /campgrounds/:id/comments/:comment_id
-
-## Authorization Part 2: Comments
-* User can only edit his/her comments
-* User can only delete his/her comments
-* Hide/Show edit and delete buttons
-* Refactor Middleware to a single file
-
-## Adding in Flash!
-* Demo working version
-* Install and configure connect-flash
-* Add bootstrap alerts to header
-
-## Adding dynamic price tag
-* Show user-defined price
-* Edit new or old price
-* Change model for campground
+#### [MIT](./LICENSE)
