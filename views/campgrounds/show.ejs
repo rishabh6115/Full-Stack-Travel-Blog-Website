@@ -47,7 +47,7 @@
 
                             <li class="list-group-item">₹ <%= campgrounds.price%>/night</li>
                         </ul>
-                        <% if(user &&( campgrounds.author.equals(user) || user.username==='admin' ) ){%>
+                        <% if(user && campgrounds.author.equals(user) ){%>
                             <div class="card-body">
                                 <a class="card-link btn btn-info" href="/campgrounds/<%=campgrounds._id%>/edit">Edit</a>
                                 <form class="d-inline" action="/campgrounds/<%=campgrounds._id%>?_method=DELETE"
@@ -112,7 +112,7 @@
 
                                     <p class="card-text">Review:<%= c.body %>
                                     </p>
-                                    <% if(user && (user.username===c.author.username || user.username==='admin' ) ){ %>
+                                    <% if(user && user.username===c.author.username  ){ %>
                                         <form
                                             action="/campgrounds/<%= campgrounds._id %>/reviews/<%= c._id %>?_method=DELETE"
                                             method="POST">

@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Review = require('./review')
 const { cloudinary } = require('../cloudinary/index')
-
+const opts = { toJSON: { virtuals: true } };
 
 const imageSchema = new Schema({
 
@@ -44,7 +44,14 @@ const campgroundSchema = new Schema({
       ref: "Review",
     },
   ],
+},opts);
+
+campgroundSchema.virtual('properties.popUp').get(function () {
+  return `
+  <b><a href="/campgrounds/${this._id}">${this.title}</a></b> `
 });
+
+
 
 campgroundSchema.post('findOneAndDelete', async function (doc) {
   const delImages = doc.images.map(t => t.filename)

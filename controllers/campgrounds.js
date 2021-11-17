@@ -26,7 +26,6 @@ module.exports.makeNewCampground = async (req, res, next) => {
     campground.images = req.files.map(t => ({ url: t.path, filename: t.filename }))
     campground.author = req.user._id;
     await campground.save();
-    console.log(campground)
     req.flash('success', 'Successfully made a new campground!!')
     res.redirect(`/campgrounds/${campground._id}`)
 }
@@ -38,7 +37,6 @@ module.exports.updateCampground = async (req, res, next) => {
     const img = req.files.map(t => ({ url: t.path, filename: t.filename }))
     camp.images.push(...img)
     await camp.save();
-    console.log(req.body.deleteImages)
     if (req.body.deleteImages) {
         for (let filename of req.body.deleteImages) {
             cloudinary.uploader.destroy(filename)
