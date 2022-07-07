@@ -1,8 +1,8 @@
-# YelpCamp
-A full-stack Node.js project from my web dev course with RESTful routing
+# Travel-Ara
+A full-stack Node.js project with RESTful routing
 
 ## Live Demo
-To see the app in action, go to [https://cryptic-forest-45396.herokuapp.com/](https://cryptic-forest-45396.herokuapp.com/)
+To see the app in action, go to [https://travel-ara.herokuapp.com/](https://travel-ara.herokuapp.com//)
 
 
 ## Features
@@ -21,15 +21,15 @@ To see the app in action, go to [https://cryptic-forest-45396.herokuapp.com/](ht
 
   * Admin can manage all posts and comments
 
-* Manage campground posts with basic functionalities:
+* Manage posts with basic functionalities:
 
   * Create, edit and delete posts and comments
 
-  * Upload campground photos
+  * Upload photos 
 
-  * Display campground location on Google Maps
+  * Display place location on Google Maps
   
-  * Search existing campgrounds
+  * Search existing reviews
 
 * Manage user account with basic functionalities:
 
@@ -41,7 +41,7 @@ To see the app in action, go to [https://cryptic-forest-45396.herokuapp.com/](ht
 
 ### Custom Enhancements
 
-* Update campground photos when editing campgrounds
+* Update place photos when editing places
 
 * Improve image load time on the landing page using Cloudinary
 
