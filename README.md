@@ -2,7 +2,7 @@
 A full-stack Node.js project with RESTful routing
 
 ## Live Demo
-To see the app in action, go to [https://travel-ara.herokuapp.com/](https://travel-ara.herokuapp.com//)
+To see the app in action, go to [https://travel-ara.onrender.com/](https://travel-ara.onrender.com//)
 
 
 ## Features
