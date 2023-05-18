@@ -3,7 +3,7 @@ const Campground = require("../models/campground");
 const { places, descriptors } = require("./seedHelpers");
 const cities = require("./citites");
 
-mongoose.connect("mongodb://localhost:27017/yelp-camp");
+mongoose.connect("mongodb://localhost:27017/Travel-Ara");
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
